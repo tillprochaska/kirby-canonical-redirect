@@ -1,0 +1,4 @@
+vendor/
+tests/support/kirby/media
+tests/support/kirby/site/sessions
+*.cache

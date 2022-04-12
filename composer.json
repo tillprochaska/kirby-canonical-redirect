@@ -1,0 +1,42 @@
+{
+  "name": "tillprochaska/kirby-canonical-redirect",
+  "description": "Automatically redirect to the canonical URL.",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.1",
+    "getkirby/cms": "^3.6"
+  },
+  "require-dev": {
+    "pestphp/pest": "^1.21",
+    "friendsofphp/php-cs-fixer": "3.4",
+    "tillprochaska/kirby-test-utils": "0.1.0"
+  },
+  "authors": [
+    {
+      "name": "Till Prochaska",
+      "email": "mail@tillprochaska.de"
+    }
+  ],
+  "scripts": {
+    "test": "pest",
+    "cs": "php-cs-fixer fix --dry-run --config=.php-cs -- tests/ plugin/",
+    "cs:fix": "php-cs-fixer fix --config=.php-cs -- tests/ plugin/"
+  },
+  "autoload": {
+    "files": ["index.php"]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TillProchaska\\KirbyImageOptimizer\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "kirby-cms-path": false
+  },
+  "config": {
+    "allow-plugins": {
+      "getkirby/composer-installer": true,
+      "pestphp/pest-plugin": true
+    }
+  }
+}
